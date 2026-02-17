@@ -22,6 +22,6 @@ def setup_browser():
         options=options
     )
 
-    driver = webdriver.Chrome(options=options)
+    #driver = webdriver.Chrome(options=options)
 
     yield driver

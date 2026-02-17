@@ -13,9 +13,10 @@ from pages.registration_page import RegistrationPage
 def test_successful(setup_browser):
     registration_page = RegistrationPage(setup_browser)
 
-
     with allure.step("Open registration form"):
         registration_page.open()
+
+    with allure.step('Fill form'):
         registration_page.fill_number('1234356')
         registration_page.fill_text('wwwww')
         registration_page.fill_password('1234gj')
