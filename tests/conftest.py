@@ -4,13 +4,13 @@ from selenium.webdriver.chrome.options import Options
 
 # @pytest.fixture(scope="function")
 # def setup_browser():
-#     # options = Options()
-#     # # options.add_argument("--headless")
-#     # options.add_argument("--no-sandbox")
-#     # options.add_argument("--disable-dev-shm-usage")
-#     #
-#     # # Для локального запуска:
-#     # driver = webdriver.Chrome(options=options)
+#     options = Options()
+#     # options.add_argument("--headless")
+#     options.add_argument("--no-sandbox")
+#     options.add_argument("--disable-dev-shm-usage")
+#
+#     # Для локального запуска:
+#     driver = webdriver.Chrome(options=options)
 
 
 @pytest.fixture(scope='function')
@@ -22,6 +22,6 @@ def setup_browser():
         options=options
     )
 
-    # driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(options=options)
 
     yield driver
