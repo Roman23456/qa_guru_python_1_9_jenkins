@@ -1,6 +1,5 @@
 import allure
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -16,7 +15,7 @@ class RegistrationPage:
     def open(self):
         self.driver.get(self.URL)
 
-    @allure.step('number')
+    @allure.step('Fill number')
     def fill_number(self, number):
         element = WebDriverWait(self.driver, timeout=15).until(
             EC.element_to_be_clickable((By.ID, "input-number"))
@@ -24,7 +23,7 @@ class RegistrationPage:
         element.clear()
         element.send_keys(number)
 
-    @allure.step('Text')
+    @allure.step('Fill Text')
     def fill_text(self, text):
         element = WebDriverWait(self.driver, timeout=15).until(
             EC.element_to_be_clickable((By.ID, "input-text"))
@@ -40,7 +39,7 @@ class RegistrationPage:
         element.clear()
         element.send_keys(password)
 
-    @allure.step('date')
+    @allure.step('Fill date')
     def fill_date(self, date):
         element = WebDriverWait(self.driver, timeout=15).until(
             EC.element_to_be_clickable((By.ID, "input-date"))
