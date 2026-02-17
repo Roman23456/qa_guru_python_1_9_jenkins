@@ -1,4 +1,5 @@
 import pytest
+from allure_commons._allure import attach
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -25,3 +26,7 @@ def setup_browser():
     #driver = webdriver.Chrome(options=options)
 
     yield driver
+
+    attach.add_html(driver)
+    attach.add_screenshot(driver)
+    attach.add_logs(driver)
