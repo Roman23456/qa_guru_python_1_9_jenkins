@@ -12,3 +12,4 @@ def test_successful(setup_browser):
 
     with allure.step('Поиск техники'):
         actionlink_page.search_input('Ноутбуки')
+
