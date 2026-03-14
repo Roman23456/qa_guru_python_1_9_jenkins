@@ -8,3 +8,5 @@ def test_successful(setup_browser):
 
     with allure.step("Открываем страницу"):
         actionlink_page.open()
+
+
